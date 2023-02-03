@@ -3,8 +3,6 @@
 class Sitemap_Menu {
 
   public function __construct () {
-    // delete_option( 'troms_seo_sitemap_type' );
-    // delete_option( 'troms_seo_sitemap_custom_url' );
     if ( !get_option( 'troms_seo_sitemap_type' ) ) self::create_default_sitemap_type_options();
     if ( !get_option( 'troms_seo_sitemap_custom_url' ) ) self::create_default_sitemap_url_options();
   }

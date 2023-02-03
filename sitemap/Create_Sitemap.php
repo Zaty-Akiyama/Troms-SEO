@@ -12,6 +12,7 @@ class Class_Sitemap {
 
     add_action( 'template_redirect', array( $this, 'sitemap_controller' ) );
     
+    add_filter( 'redirect_canonical', array($this, 'remove_end_slash'), 10, 2 );
   }
 
   public function add_routing () {
@@ -28,10 +29,15 @@ class Class_Sitemap {
     require_once( TROMS_MENU_PATH . '/operation/Menu_Functions.php' );
     new Menu_Functions;
   }
+  public function remove_end_slash ($redirect_url, $request_url) {
+    if( get_query_var('sitemap_params') === '' ) return $redirect_url;
+
+    return $request_url;
+  }
 
   public function sitemap_controller () {
     global $wp_query;
-    global $wp_rewrite;
+
     $controll_query = isset( $wp_query->query_vars['sitemap_params']) ? $wp_query->query_vars['sitemap_params'] : false;
     if( !$controll_query ) return;
 
