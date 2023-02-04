@@ -90,6 +90,14 @@ class Class_Sitemap {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     XML;
 
+    $home_url = home_url();
+    echo <<<XML
+
+      <url>
+        <loc>$home_url</loc>
+      </url>
+    XML;
+
     if( $sitemap_type["type_$type"] === "post" ) {
       
       $args = array(
