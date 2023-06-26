@@ -104,10 +104,14 @@ class Troms_SEO_Create_Sitemap {
         'post_type' => $type,
         'posts_per_page' => -1
       );
+
       $custom_query = new WP_Query( $args );
       if ( $custom_query->have_posts() ) :
       while ( $custom_query->have_posts() ) : 
         $custom_query->the_post();
+
+        $troms_seo_noindex = get_post_meta( get_the_ID(), '_troms_seo_noindex', true );
+        if( "1" === $troms_seo_noindex ) continue;
 
         $url = get_permalink();
         $date = get_the_date() === get_the_modified_date() ? get_the_date("Y-m-d") : get_the_modified_date("Y-m-d");
