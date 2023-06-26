@@ -4,3 +4,6 @@
 
 ## 1.0.1
 WordPressの"Deprecated"の警告の解消
+
+## 1.1.0
+ファイルの命名をWordPressの規則に合わせる

@@ -1,8 +1,8 @@
 <?php
 
-if( ! class_exists( 'Setting_Menu' ) ):
+if( ! class_exists( 'Troms_SEO_Setting_Menu' ) ):
 
-class Setting_Menu {
+class Troms_SEO_Setting_Menu {
   public function __construct () {
     self::define_constants();
     self::includes();
@@ -35,7 +35,7 @@ class Setting_Menu {
   */
   private function includes () {
 
-    require_once( TROMS_MENU_PATH . '/operation/Menu_Functions.php' );
+    require_once( TROMS_MENU_PATH . '/operation/class-troms-seo-menu-functions.php' );
   }
 
   private function action_hooks () {
@@ -62,7 +62,7 @@ class Setting_Menu {
       'Troms設定',
       'manage_options',
       'troms-setting',
-      array( 'Menu_Functions', 'troms_menu_top' ),
+      array( 'Troms_SEO_Menu_Functions', 'troms_menu_top' ),
       'dashicons-chart-pie',
       20,
     );
@@ -81,12 +81,12 @@ class Setting_Menu {
       'サイトマップ設定',
       'manage_options',
       'troms-content-sub',
-      array( 'Menu_Functions', 'troms_menu_sitemap' ),
+      array( 'Troms_SEO_Menu_Functions', 'troms_menu_sitemap' ),
       2
     );
   }
 }
 
-new Setting_Menu();
+new Troms_SEO_Setting_Menu();
 
 endif;

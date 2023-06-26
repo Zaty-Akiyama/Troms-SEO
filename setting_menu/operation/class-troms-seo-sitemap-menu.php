@@ -1,6 +1,6 @@
 <?php
 
-class Sitemap_Menu {
+class Troms_SEO_Sitemap_Menu {
 
   public function __construct () {
     if ( !get_option( 'troms_seo_sitemap_type' ) ) self::create_default_sitemap_type_options();
@@ -9,7 +9,7 @@ class Sitemap_Menu {
 
   private function sethtmlspecialchars($data){
     if (is_array($data)) {
-      return array_map("sethtmlspecialchars",$data);
+      return array_map(array($this, 'sethtmlspecialchars'), $data);
     } else {
       return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
     }
@@ -137,9 +137,9 @@ class Sitemap_Menu {
     $sitemap_custom_url_json = get_option( 'troms_seo_sitemap_custom_url' );
     $sitemap_urls = json_decode($sitemap_custom_url_json, true);
 
-    require_once( TROMS_MENU_PATH . '/operation/Box_Type_Setting.php' );
+    require_once( TROMS_MENU_PATH . '/operation/troms-seo-box-type-setting.php' );
 
-    $Box = new Box_Type_Setting;
+    $Box = new Troms_SEO_Box_Type_Setting;
   
     echo <<<HTML
     <h1 class="menu-sitemap">サイトマップ設定</h1>

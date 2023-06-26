@@ -1,8 +1,8 @@
 <?php
 
-if( ! class_exists( 'Class_Sitemap' ) ):
+if( ! class_exists( 'Troms_SEO_Create_Sitemap' ) ):
 
-class Class_Sitemap {
+class Troms_SEO_Create_Sitemap {
   public function __construct () {
     add_action( 'init', array( $this, 'add_routing' ) );
 
@@ -149,5 +149,5 @@ class Class_Sitemap {
   }
 }
 
-new Class_Sitemap;
+new Troms_SEO_Create_Sitemap;
 endif;

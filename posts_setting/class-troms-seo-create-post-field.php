@@ -1,7 +1,7 @@
 <?php
 
-if ( !class_exists( 'Create_Post_Field' ) ):
-class Create_Post_Field {
+if ( !class_exists( 'Troms_SEO_Create_Post_Field' ) ):
+class Troms_SEO_Create_Post_Field {
   public function __construct () {
 
     add_action('wp_loaded', array($this, 'add_excerpt'));
@@ -39,6 +39,6 @@ class Create_Post_Field {
    }
 }
 
-new Create_Post_Field;
+new Troms_SEO_Create_Post_Field;
 
 endif;

@@ -1,6 +1,6 @@
 <?php
 
-class Box_Type_Setting {
+class Troms_SEO_Box_Type_Setting {
   public function __construct () {}
 
   public function box_echo ( $slug, $value, $type ) {
