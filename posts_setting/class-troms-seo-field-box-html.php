@@ -12,7 +12,7 @@ class Troms_SEO_Field_box_HTML {
     echo <<<HTML
     <div>
       <input id="troms_noindex" name="troms_noindex" type="checkbox" value="troms_noindex" $noindex_checked>
-      <label for="troms_noindex">検索に表示する</label>
+      <label for="troms_noindex">検索に表示しない</label>
     </div>
     HTML;
     wp_nonce_field( 'troms_seo_nonce', '_troms_seo_nonce' );
