@@ -23,7 +23,7 @@ class Menu_Functions {
     require_once( TROMS_MENU_PATH . '/operation/Sitemap_Menu.php' );
 
     $sitemap_menu = new Sitemap_Menu();
-    $sitemap_menu::echo();
+    $sitemap_menu->echo();
   } 
 }
 

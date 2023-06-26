@@ -129,7 +129,7 @@ class Sitemap_Menu {
    */
   public function echo () {
 
-    self::post_process();
+    $this->post_process();
 
     $sitemap_type_json = get_option( 'troms_seo_sitemap_type' );
     $sitemap_type = json_decode($sitemap_type_json, true);
@@ -151,8 +151,7 @@ class Sitemap_Menu {
     //表示するタイプの設定
     foreach ($sitemap_type as $key => $value) {
       if( preg_match('/^type_/', $key) ) continue;
-
-      $Box::box_echo( $key, $value, $sitemap_urls["type_$key"] );
+      $Box->box_echo( $key, $value, $sitemap_type["type_$key"] );
     }
 
     echo <<<HTML

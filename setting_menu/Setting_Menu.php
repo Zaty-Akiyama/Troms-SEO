@@ -8,7 +8,7 @@ class Setting_Menu {
     self::includes();
     self::action_hooks();
 
-    add_action( 'admin_enqueue_scripts', array( __CLASS__, 'hook_admin_enqueue_scripts' ) );
+    add_action( 'admin_enqueue_scripts', array( $this, 'hook_admin_enqueue_scripts' ) );
   }
 
   /**
@@ -39,8 +39,8 @@ class Setting_Menu {
   }
 
   private function action_hooks () {
-    add_action( 'admin_menu', array( __CLASS__, 'troms_add_top_menu' ) );
-    add_action( 'admin_menu', array( __CLASS__, 'troms_add_content_submenu' ) );
+    add_action( 'admin_menu', array( $this, 'troms_add_top_menu' ) );
+    add_action( 'admin_menu', array( $this, 'troms_add_content_submenu' ) );
   }
 
   public function hook_admin_enqueue_scripts () {
