@@ -6,7 +6,6 @@ Troms-SEOでは、むしろ拡張性や選択性に特化したTheme開発者の
 ## TODO
 - titleタグの生成機能
 - descriptionタグの生成機能
-- sitemap.xmlの生成機能
 - パンクズリストの生成関数
 - パンクズリストの構造化データ生成機能
 - WEBサイト情報の構造化データ生成機能
@@ -15,4 +14,3 @@ Troms-SEOでは、むしろ拡張性や選択性に特化したTheme開発者の
 - thumbnailから動的にthumbnail metaタグの生成機能
 - ogpの生成機能
 - canonicalタグ生成機能
-- H4のデザイン編集bgc無し、padding減らす
