@@ -9,7 +9,7 @@ class Troms_SEO_Box_Type_Setting {
     <h2>$slug</h2>
     <div>
       <input id="type_$slug" name="type_$slug" type="checkbox" value="$slug" $value_checked>
-      <label for="type_$slug">検索に表示する</label>
+      <label for="type_$slug">検索に表示しない</label>
     </div>
     HTML;
   }

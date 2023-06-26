@@ -5,7 +5,7 @@
  * Plugin name: Troms-SEO
  * 
  * Description: ZATYのWordPressプラグイン規格TromsのSEO対策用プラグインです。
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: ZATY
  * Author URI: https://zaty.jp
  * 

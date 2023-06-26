@@ -10,3 +10,6 @@ WordPressの"Deprecated"の警告の解消
 
 ## 1.2.0
 noindex,nofollowの機能の追加
+
+## 1.2.1
+誤植の修正
